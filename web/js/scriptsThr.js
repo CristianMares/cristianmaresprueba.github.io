@@ -167,6 +167,7 @@ window.onbeforeunload = () => {
         form.reset(); // Resetea cada formulario al recargar la página
     }
 };
+
 document.addEventListener('DOMContentLoaded', function () {
     const items = document.querySelectorAll('.beneficio-item');
     

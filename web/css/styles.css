@@ -1,1 +1,761 @@
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Roboto',sans-serif;line-height:1.6;background-color:#f4f4f4}.container{width:80%;max-width:1200px;margin:0 auto;padding:20px}header{background:#333;color:#fff;padding:10px 0;position:sticky;top:0;z-index:1000;height:147px}.header-content{display:flex;justify-content:space-between;align-items:center}.logo-container{flex:1;margin-left:10px}.logo{max-height:80px}nav{flex:4}nav ul{list-style:none;display:flex;justify-content:flex-start;padding-left:0;margin-left:0;gap:15px}nav ul li{margin:0 15px;position:relative}.nav-1{color:#fff;background-color:#333;text-decoration:none;font-weight:700;position:relative;display:inline-block;padding:10px 20px;transition:color 0.3s,background-color 0.3s;z-index:10}.nav-1::before{content:'';position:absolute;top:50%;left:50%;width:130%;height:100%;background:#333;transform:translate(-50%,-50%) skew(-20deg);z-index:-1;transition:transform 0.3s,background-color 0.3s,opacity 0.3s}.nav-1:hover{background-color:#333;text-shadow:2px 2px 4px rgb(0 0 0 / .6)}.nav-1:hover::before{transform:translate(-50%,-50%) skew(-20deg) scaleX(1.05);background-color:#ff7f00;opacity:.6}.dropdown-content,.sub-dropdown-content{display:none;position:absolute;background-color:#444;min-width:200px;box-shadow:0 8px 16px 0 rgb(0 0 0 / .2);z-index:1000;padding:0;list-style:none;margin:0;left:0;top:100%}.dropdown-link,.sub-dropdown-link{color:#fff;padding:10px 16px;text-decoration:none;display:block;white-space:nowrap;transition:color 0.3s ease}.dropdown-link:hover,.sub-dropdown-link:hover{color:#ff7f00}.dropdown:hover .dropdown-content{display:block;left:-28%}.sub-dropdown:hover .sub-dropdown-content{display:block;left:100%;top:0}.hero{position:relative;overflow:hidden;height:100vh}.carousel{position:relative;height:100%}.carousel-item{display:none;position:absolute;width:100%;height:100%}.carousel-item.active{display:block}.carousel img{width:100%;height:100%;object-fit:cover}.carousel-caption{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#fff;background:rgb(0 0 0 / .6);padding:20px;border-radius:10px;max-width:80%}.carousel-caption h2{font-size:2.5rem;text-shadow:2px 2px 4px rgb(0 0 0 / .8);color:azure}.carousel-caption p{font-size:1.2rem;text-shadow:2px 2px 4px rgb(0 0 0 / .8);color:azure}.prev,.next{cursor:pointer;position:absolute;top:50%;padding:16px;color:#fff;font-weight:700;font-size:18px;transition:0.6s ease;border-radius:0 3px 3px 0;user-select:none}.prev{left:0;border-radius:3px 0 0 3px}.next{right:0;border-radius:0 3px 3px 0}.prev:hover,.next:hover{background-color:rgb(0 0 0 / .8)}.about,.services,.zonaOp,.contact,.transparencia{padding:50px 0;background:#fff;margin:20px 0;border-radius:10px;box-shadow:0 4px 8px rgb(0 0 0 / .1)}section{scroll-margin-top:147px}section h2{text-align:center;margin-bottom:20px;color:#333}section p{text-align:center;margin-bottom:20px;color:#666}.service{background:#f9f9f9;margin:20px 0;padding:20px;border-radius:8px;box-shadow:0 2px 4px rgb(0 0 0 / .1);text-align:center}.service img{max-width:100%;height:auto;margin-bottom:20px}.map-container{width:100%;margin-top:20px}.map-container iframe{width:100%;height:450px;border:0}footer{background:#333;color:#fff;text-align:center;padding:20px 0}footer p{text-align:center;font-size:.9rem;color:#fff;margin:10px 0}footer p a{color:#ff7f00;text-decoration:none;font-weight:700}footer p a:hover{text-decoration:underline}.social-icons a{color:#fff;margin:0 10px;font-size:1.2rem;transition:color 0.3s}.social-icons a:hover{color:#ff7f00}form{background:#fff;padding:20px;margin-top:20px;border-radius:10px;box-shadow:0 4px 8px rgb(0 0 0 / .1)}form label{display:block;margin-bottom:8px;font-weight:700;color:#333}form input,form textarea{width:100%;padding:10px;margin-bottom:20px;border:1px solid #ccc;border-radius:5px}form button{background:#ff7f00;color:#fff;border:none;padding:10px 20px;border-radius:5px;cursor:pointer;transition:background 0.3s}form button:hover{background:#cc6a00;box-shadow:0 4px 8px rgb(0 0 0 / .2)}.menu-icon{display:none;font-size:24px;cursor:pointer;color:#fff;margin-right:20px}.mobile-menu{display:none;position:fixed;top:0;left:-100%;height:100%;width:250px;background-color:#333;color:#fff;transition:left 0.3s ease;z-index:1000;padding-top:60px;overflow-y:auto;-webkit-overflow-scrolling:touch}.mobile-menu ul{list-style:none;padding:0;margin:0;text-align:left}.mobile-menu ul li{padding:15px 20px}.mobile-menu ul li a{color:#fff;text-decoration:none;font-size:18px;display:block;width:100%}.transparencia{padding:50px 0;background:#fff;margin:20px 0;border-radius:10px;box-shadow:0 4px 8px rgb(0 0 0 / .1)}.transparencia h2{text-align:center;margin-bottom:20px;color:#333}.document-link{text-align:center;margin-bottom:20px}.document-link a{font-size:1.2rem;color:#007BFF;text-decoration:none;transition:color 0.3s}.document-link a:hover{color:#0056b3}@media (max-width:910px){.header-content{justify-content:space-between}.menu-icon{display:block}nav ul{display:none}.mobile-menu.show{display:block;left:0}.beneficios-container{display:contents;padding-bottom:20px}.details{margin:-30px 0 100px 0!important}}.mobile-dropdown .arrow{float:right;transition:transform 0.3s ease}.mobile-dropdown-content,.mobile-sub-dropdown-content{max-height:0;overflow:hidden;transition:max-height 0.5s ease}.mobile-dropdown.active .mobile-dropdown-content{max-height:750px;transition:max-height 0.5s ease}.mobile-sub-dropdown.active .mobile-sub-dropdown-content{max-height:500px;transition:max-height 0.5s ease}.mobile-menu ul li a:hover{color:#ff7f00}.mobile-dropdown .arrow,.mobile-sub-dropdown .arrow{float:right;cursor:pointer;padding:0 10px;display:inline-block}.mobile-dropdown.active .arrow,.mobile-sub-dropdown.active .arrow{transform:rotate(180deg)}.mobile-menu ul li a{width:calc(100% - 40px);display:inline-block}.mobile-sub-dropdown .arrow{transition:transform 0.4s ease;transform:rotate(0deg)}.mobile-sub-dropdown.active .arrow{transform:rotate(90deg)}.counter-section{display:flex;flex-direction:column;align-items:center;margin-top:10px}.counter{font-size:48px;font-weight:700}.hero-soluciones{padding:100px 20px;background:url(../assets/soluciones-soft.jpg);color:#fff;text-align:center;position:relative;overflow:hidden;filter:brightness(.7)}.hero-container{max-width:900px;margin:0 auto;position:relative;z-index:1}.hero-title{font-size:3rem;font-weight:700;letter-spacing:2px;margin-bottom:20px;text-transform:uppercase;color:#fff;text-shadow:2px 2px 10px rgb(0 0 0 / .7)}.hero-description{font-size:1.4rem;line-height:1.8;color:#fff;text-shadow:1px 1px 5px rgb(0 0 0 / .6);animation:fadeIn 1.7s ease-in-out}.hero-soluciones::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgb(0 0 0 / .3);z-index:0}@keyframes fadeIn{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}.beneficios-titulo{font-size:400%;font-weight:700;color:#333;text-align:left;margin-bottom:1%;position:relative;text-transform:uppercase;margin-top:2%;margin-left:3%}.beneficios-titulo::after{content:'';position:absolute;bottom:-10%;left:4%;transform:translateX(-50%);width:10%;height:5%;background-color:#3B82F6;border-radius:2px;margin-left:2%;margin-block:10px}.beneficios-slider{width:95%;max-height:550px;height:70vh;display:block;align-items:center;justify-content:center;background-color:#f5f5f5;margin:0 auto;position:relative}.beneficios-container{display:flex;gap:10px;align-items:center;width:100%}.beneficio-item{flex-basis:7%;position:relative;cursor:pointer;transition:0.7s ease;background-color:#fff;border-radius:8px;overflow:hidden;box-shadow:0 4px 8px rgb(0 0 0 / .1);display:flex;justify-content:center;align-items:center}.beneficio-item img{width:100%;height:100%;object-fit:cover;filter:brightness(.7)}.beneficio-item h1{font-size:30px;font-weight:700;color:#fff;position:absolute;top:80%;left:50%;transform:rotate(270deg);transform-origin:left;font-family:'Arial Black',sans-serif;text-transform:uppercase;display:block;white-space:nowrap;z-index:10}.details{position:absolute;top:65%;bottom:20px;left:5%;color:#fff;display:none}.details h2{font-size:30px;font-weight:700;margin-bottom:10px;color:white!important}.details p{font-size:22px;line-height:28px;color:white!important}.beneficio-item.active{flex-basis:80%;height:500px!important}.beneficio-item.active h1{display:none}.beneficio-item.active .details{display:block}.beneficio-item:nth-child(1),.beneficio-item:nth-child(4){height:420px}.beneficio-item:nth-child(2),.beneficio-item:nth-child(3){height:480px}
+/* Reset de estilos por defecto del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Contenedor principal de la página */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 147px;
+}
+
+/* Contenido dentro del header */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Contenedor del logo */
+.logo-container {
+    flex: 1;
+    margin-left: 10px;
+}
+
+/* Estilo del logo */
+.logo {
+    max-height: 80px;
+}
+
+/* Navegación */
+nav {
+    flex: 4;
+}
+
+/* Estilos de la lista de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-left: 0;
+    gap: 15px;
+}
+
+/* Estilos de los elementos de la lista */
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+/* Estilos de los enlaces de navegación */
+.nav-1 {
+    color: #fff;
+    background-color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    transition: color 0.3s, background-color 0.3s;
+    z-index: 10;
+}
+
+/* Pseudo-elemento antes del enlace para efectos de hover */
+.nav-1::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 130%;
+    height: 100%;
+    background: #333;
+    transform: translate(-50%, -50%) skew(-20deg);
+    z-index: -1;
+    transition: transform 0.3s, background-color 0.3s, opacity 0.3s;
+}
+
+/* Efecto hover en los enlaces de navegación */
+.nav-1:hover {
+    background-color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Efecto hover en el pseudo-elemento antes del enlace */
+.nav-1:hover::before {
+    transform: translate(-50%, -50%) skew(-20deg) scaleX(1.05);
+    background-color: #ff7f00;
+    opacity: 0.6;
+}
+
+/* Estilos para el menú desplegable de "Servicios" */
+.dropdown-content, .sub-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    left: 0;
+    top: 100%;
+}
+
+/* Estilos específicos para los enlaces del menú desplegable */
+.dropdown-link, .sub-dropdown-link {
+    color: #fff;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+/* Efecto de hover: solo cambia el color del texto */
+.dropdown-link:hover, .sub-dropdown-link:hover {
+    color: #ff7f00;
+}
+
+/* Mostrar el menú desplegable al pasar el cursor sobre el elemento padre */
+.dropdown:hover .dropdown-content {
+    display: block;
+    left: -28%;
+}
+
+/* Submenú (Área de TI) */
+.sub-dropdown:hover .sub-dropdown-content {
+    display: block;
+    left: 100%;
+    top: 0;
+}
+
+/* Estilos para el carrusel */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.carousel {
+    position: relative;
+    height: 100%;
+}
+
+.carousel-item {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos de los subtítulos del carrusel */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+/* Estilo del texto principal en el carrusel */
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: azure;
+}
+
+/* Estilo del texto secundario en el carrusel */
+.carousel-caption p {
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: azure;
+}
+
+/* Botones para cambiar slides en el carrusel */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Botón de retroceso en el carrusel */
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Botón de avance en el carrusel */
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Efecto hover en los botones del carrusel */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para otras secciones de la página */
+.about, .services, .zonaOp, .contact, .transparencia {
+    padding: 50px 0;
+    background: #fff;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    scroll-margin-top: 147px; /* Ajusta según la altura del header */
+}
+
+/* Estilo de los títulos de sección */
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo de los párrafos de sección */
+section p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Estilo de los contenedores de servicios */
+.service {
+    background: #f9f9f9;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo de las imágenes dentro de los contenedores de servicios */
+.service img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Contenedor del mapa */
+.map-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Estilo del iframe del mapa */
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+/* Estilos del pie de página */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Estilo general del texto en el footer */
+footer p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fff;
+    margin: 10px 0;
+}
+
+/* Estilo de los enlaces dentro del footer */
+footer p a {
+    color: #ff7f00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Efecto hover para los enlaces en el footer */
+footer p a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo de los iconos sociales dentro del pie de página */
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+/* Efecto hover en los iconos sociales */
+.social-icons a:hover {
+    color: #ff7f00;
+}
+
+/* Estilos para el formulario de contacto */
+form {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de las etiquetas dentro del formulario */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo de los campos de entrada y áreas de texto dentro del formulario */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo del botón de envío dentro del formulario */
+form button {
+    background: #ff7f00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Efecto hover en el botón de envío */
+form button:hover {
+    background: #cc6a00;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Icono del menú móvil */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    margin-right: 20px;
+}
+
+/* Estilos del menú móvil */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding-top: 60px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Estilo de la lista dentro del menú móvil */
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+/* Estilo de los elementos de la lista dentro del menú móvil */
+.mobile-menu ul li {
+    padding: 15px 20px;
+}
+
+/* Estilo de los enlaces dentro del menú móvil */
+.mobile-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+}
+
+/* Estilos para la sección de transparencia */
+.transparencia {
+    padding: 50px 0;
+    background: #fff;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del título dentro de la sección de transparencia */
+.transparencia h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo de los enlaces a documentos dentro de la sección de transparencia */
+.document-link {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los enlaces dentro de la sección de transparencia */
+.document-link a {
+    font-size: 1.2rem;
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Efecto hover en los enlaces de la sección de transparencia */
+.document-link a:hover {
+    color: #0056b3;
+}
+
+/* Estilos para media queries */
+@media (max-width: 910px) {
+    .header-content {
+        justify-content: space-between;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .mobile-menu.show {
+        display: block;
+        left: 0;
+    }
+    
+    .beneficios-container{
+        display: contents;
+        padding-bottom: 20px;
+    }
+    
+    .details{
+        margin: -30px 0 100px 0 !important;
+    }
+
+}
+
+/* Estilos para las flechas en el menú móvil */
+.mobile-dropdown .arrow {
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo para desplegar los submenús */
+.mobile-dropdown-content, .mobile-sub-dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease; /* Transición suave */
+}
+
+/* Mostrar el primer submenú cuando esté desplegado */
+.mobile-dropdown.active .mobile-dropdown-content {
+    max-height: 750px; /* Altura ajustada según el contenido */
+    transition: max-height 0.5s ease; /* Transición suave */
+}
+
+/* Mostrar el sub-submenú cuando esté desplegado */
+.mobile-sub-dropdown.active .mobile-sub-dropdown-content {
+    max-height: 500px; /* Altura ajustada según el contenido */
+    transition: max-height 0.5s ease; /* Transición suave */
+}
+
+/* Cambiar el color del enlace en el hover */
+.mobile-menu ul li a:hover {
+    color: #ff7f00;
+}
+
+/* Estilos para las flechas en el menú móvil */
+.mobile-dropdown .arrow, .mobile-sub-dropdown .arrow {
+    float: right;
+    cursor: pointer;
+    padding: 0 10px;
+    display: inline-block;
+}
+
+/* Rotar la flecha al desplegar el submenú */
+.mobile-dropdown.active .arrow, .mobile-sub-dropdown.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Estilo para los enlaces */
+.mobile-menu ul li a {
+    width: calc(100% - 40px);
+    display: inline-block;
+}
+
+/* Estilo inicial para la flecha del sub-submenú */
+.mobile-sub-dropdown .arrow {
+    transition: transform 0.4s ease; /* Suaviza la rotación de la flecha */
+    transform: rotate(0deg);
+}
+
+/* Estilo cuando el sub-submenú está activo, rotando la flecha hacia abajo */
+.mobile-sub-dropdown.active .arrow {
+    transform: rotate(90deg); /* Rotación hacia la derecha */
+}
+
+.counter-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.counter {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero-soluciones {
+    padding: 100px 20px;
+    background: url('../assets/soluciones-soft.jpg');
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    filter: brightness(0.7);
+}
+
+.hero-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-description {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1.7s ease-in-out;
+}
+
+.hero-soluciones::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.beneficios-titulo {
+  font-size: 400%;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  margin-bottom: 1%;
+  position: relative;
+  text-transform: uppercase;
+  margin-top: 2%;
+  margin-left: 3%;
+}
+
+.beneficios-titulo::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: 4%;
+  transform: translateX(-50%);
+  width: 10%;
+  height: 5%;
+  background-color: #3B82F6; /* Línea inferior decorativa */
+  border-radius: 2px;
+  margin-left: 2%;
+  margin-block: 10px;
+}
+
+
+
+
+/* Beneficios Section */
+.beneficios-slider {
+  width: 95%;
+  max-height: 550px;
+  height: 70vh;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  position: relative;
+
+}
+
+.beneficios-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.beneficio-item {
+  flex-basis: 7%;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s ease;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.beneficio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.beneficio-item h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  top: 80%;
+  left: 50%; /* Ajusta la posición del título */
+  transform: rotate(270deg); /* Gira el texto 90 grados */
+  transform-origin: left; /* Alinea el texto */
+  font-family: 'Arial Black', sans-serif; /* Cambia la fuente a algo más grueso */
+  text-transform: uppercase;
+  display: block;
+  white-space: nowrap;
+  z-index: 10; /* Asegura que el texto esté en primer plano */
+}
+
+.details {
+  position: absolute;
+  top: 65%;
+  bottom: 20px;
+  left: 5%;
+  color: #fff;
+  display: none;
+}
+
+.details h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white !important;
+}
+
+.details p {
+  font-size: 22px;
+  line-height: 28px;
+  color: white !important;
+}
+
+.beneficio-item.active {
+  flex-basis: 80%;
+  height: 500px !important;
+}
+
+.beneficio-item.active h1 {
+  display: none;
+}
+
+.beneficio-item.active .details {
+  display: block;
+}
+
+/* Ítems más pequeños (primer y último) */
+.beneficio-item:nth-child(1),
+.beneficio-item:nth-child(4) {
+  height: 420px;
+}
+
+/* Ítems intermedios (los que están cerca del centro pero no son el activo) */
+.beneficio-item:nth-child(2),
+.beneficio-item:nth-child(3) {
+  height: 480px;
+}
+
