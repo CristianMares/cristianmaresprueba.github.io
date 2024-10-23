@@ -679,7 +679,7 @@ form button:hover {
   flex-basis: 7%;
   position: relative;
   cursor: pointer;
-  transition: 0.4s ease;
+  transition: 0s ease;
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
