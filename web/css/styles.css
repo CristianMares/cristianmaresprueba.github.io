@@ -679,7 +679,7 @@ form button:hover {
   flex-basis: 7%;
   position: relative;
   cursor: pointer;
-  transition: 0s ease;
+  transition: 0.3s ease;
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
@@ -710,6 +710,7 @@ form button:hover {
   display: block;
   white-space: nowrap;
   z-index: 10; /* Asegura que el texto esté en primer plano */
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .details {
@@ -719,6 +720,7 @@ form button:hover {
   left: 5%;
   color: #fff;
   display: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .details h2 {
