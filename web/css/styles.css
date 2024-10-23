@@ -743,10 +743,16 @@ form button:hover {
 
 .beneficio-item.active h1 {
   display: none;
+  opacity: 0;
+  transform: translateX(-20px); /* Mueve el texto ligeramente fuera de la pantalla con la transición */
+
 }
 
 .beneficio-item.active .details {
   display: block;
+  opacity: 1; /* Muestra los detalles gradualmente */
+  transform: translateY(0); /* Asegura que el texto de los detalles aparezca suavemente */
+
 }
 
 /* Ítems más pequeños (primer y último) */
