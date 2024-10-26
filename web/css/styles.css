@@ -702,15 +702,16 @@ form button:hover {
   color: #fff;
   position: absolute;
   top: 80%;
-  left: 50%; /* Ajusta la posición del título */
-  transform: rotate(270deg); /* Gira el texto 90 grados */
-  transform-origin: left; /* Alinea el texto */
-  font-family: 'Arial Black', sans-serif; /* Cambia la fuente a algo más grueso */
+  left: 50%;
+  transform: rotate(270deg); /* Mantiene la rotación fija */
+  transform-origin: left;
+  font-family: 'Arial Black', sans-serif;
   text-transform: uppercase;
-  display: block;
   white-space: nowrap;
-  z-index: 10; /* Asegura que el texto esté en primer plano */
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* Solo transición de opacidad y visibilidad */
 }
 
 .details {
@@ -719,8 +720,9 @@ form button:hover {
   bottom: 20px;
   left: 5%;
   color: #fff;
-  display: none;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .details h2 {
@@ -742,17 +744,13 @@ form button:hover {
 }
 
 .beneficio-item.active h1 {
-  display: none;
   opacity: 0;
-  transform: translateX(-20px); /* Mueve el texto ligeramente fuera de la pantalla con la transición */
-
+  visibility: hidden; /* Desaparece sin rotación */
 }
 
 .beneficio-item.active .details {
-  display: block;
-  opacity: 1; /* Muestra los detalles gradualmente */
-  transform: translateY(0); /* Asegura que el texto de los detalles aparezca suavemente */
-
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Ítems más pequeños (primer y último) */
