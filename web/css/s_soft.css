@@ -1,0 +1,383 @@
+/* Estilos Generales */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.service {
+    background: #f9f9f9;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    text-align: center;
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 910px) {
+    .beneficios-container {
+        display: contents;
+        padding-bottom: 20px;
+    }
+    .details {
+        margin: -30px 0 100px 0 !important;
+    }
+    .custom-app-features, .database-features, .features {
+        flex-direction: column;
+    }
+    .app-feature-item, .db-feature-item, .feature-item {
+        flex: 1 1 100%;
+    }
+}
+
+/* Estilos de Hero */
+.hero-soluciones {
+    padding: 140px 20px;
+    background: url(../assets/soluciones-soft.jpg);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    filter: brightness(.7);
+}
+
+.hero-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, .7);
+}
+
+.hero-description {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, .6);
+    animation: fadeIn 2.3s ease-in-out;
+}
+
+.hero-soluciones::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    z-index: 0;
+}
+
+/* Estilos de Beneficios */
+.beneficios-slider {
+    width: 95%;
+    max-height: 550px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    margin: 50px auto 60px auto;
+    position: relative;
+    transform: scale(0.7) translateZ(-400px);
+    transition: transform 0.6s ease-out, opacity 0.4s ease-out;
+}
+
+.beneficios-titulo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2% 0 20px;
+    position: relative;
+}
+
+.beneficios-titulo::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #3b82f6;
+    border-radius: 2px;
+}
+
+.beneficios-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.beneficio-item {
+    flex-basis: 7%;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s ease;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.beneficio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.beneficio-item h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: rotate(270deg);
+    transform-origin: left;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.details {
+    position: absolute;
+    top: 65%;
+    bottom: 20px;
+    left: 5%;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.details h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff !important;
+}
+
+.details p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #fff !important;
+}
+
+.beneficio-item.active {
+    flex-basis: 80%;
+    height: 500px !important;
+}
+
+.beneficio-item.active h1 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.beneficio-item.active .details {
+    visibility: visible;
+    opacity: 1;
+}
+
+.beneficio-item:nth-child(1), .beneficio-item:nth-child(4) {
+    height: 420px;
+}
+
+.beneficio-item:nth-child(2), .beneficio-item:nth-child(3) {
+    height: 480px;
+}
+
+/* Estilos Generales para la Sección Compartida */
+.service-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de Sección */
+.service-section h2 {
+    font-size: 2.8rem;
+    color: #1e3a8a;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.service-section h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #ff7f00;
+}
+
+/* Contenedor de Texto e Imagen en Flexbox */
+.section-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+/* Texto de la Sección (70% de ancho) */
+.section-texto {
+    flex: 0 0 70%;
+    color: #333;
+    padding-left: 20px;
+    animation: fadeInText 1.2s ease;
+    text-align: left;
+}
+
+/* Estilos para la Imagen de la Sección */
+.section-imagen {
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Animación de Entrada desde la Orilla para la Imagen */
+.section-imagen img {
+    max-width: 80%;
+    max-height: 80%;
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Animación de Fade y Desplazamiento */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos para activar animación de entrada desde la izquierda o derecha según clase */
+.section-imagen.left img {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.section-imagen.right img {
+    transform: translateX(50px);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+
+/* Estilos de Subtítulo */
+.subtitulo {
+    font-size: 1.4rem;
+    color: #3b82f6;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+/* Texto de Contenido en la Sección */
+.section-texto p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Lista de Características de la Sección */
+.section-texto ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.section-texto ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+}
+
+.section-texto ul li::before {
+    content: "\2022";
+    color: #ff7f00;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Estilos Responsivos para Pantallas Pequeñas */
+@media (max-width: 768px) {
+    
+        /* Cambia la disposición del contenedor */
+    .section-container {
+        flex-direction: column; /* Cambia a columna */
+        align-items: center; /* Centra el contenido */
+    }
+
+    /* El título permanece arriba */
+    .section-texto {
+        order: 1; /* Segundo en orden: el texto */
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    /* Asegura que la imagen siempre aparezca al final en pantallas pequeñas */
+    .section-imagen {
+        order: 2; /* Tercero en orden: la imagen */
+        flex: 1 1 80%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-imagen img {
+        max-width: 70%;
+        margin: 0 auto;
+    }    
+}
