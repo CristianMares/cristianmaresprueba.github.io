@@ -9,27 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-window.addEventListener("scroll", function () {
-    const heroSection = document.querySelector(".hero-soluciones");
-    const scrollPosition = window.scrollY;
-    const fadeOutPoint = 500; // Cambiamos el punto de desvanecimiento a 300 para que desaparezca antes de alcanzar el gris.
 
-    // Calcula la opacidad en función de la posición de desplazamiento
-    let opacity = 1 - (scrollPosition / fadeOutPoint);
-
-    // Limita la opacidad para evitar valores negativos
-    opacity = Math.max(opacity, 0);
-
-    // Aplica la opacidad de la sección
-    heroSection.style.opacity = opacity;
-
-    // Cambia el fondo de la sección cuando la opacidad se aproxima a 0
-    if (opacity < 0.1) { 
-        heroSection.style.backgroundColor = "#f4f4f4"; // Aplica el color de fondo antes de que la opacidad llegue a 0
-    } else {
-        heroSection.style.backgroundColor = "transparent";
-    }
-});
 
 document.addEventListener('DOMContentLoaded', function () {
     const beneficioSection = document.querySelector('.beneficios-slider');

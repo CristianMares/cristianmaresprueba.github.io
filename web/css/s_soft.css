@@ -226,7 +226,7 @@
 
 /* Título de Sección */
 .service-section h2 {
-    font-size: 2.8rem;
+    font-size: clamp(1.5rem, 5vw, 2.8rem); /* Tamaño adaptable entre 1.5rem y 2.8rem */
     color: #1e3a8a;
     text-transform: uppercase;
     font-weight: bold;
@@ -234,6 +234,8 @@
     margin-bottom: 20px;
     position: relative;
     padding-bottom: 8px;
+    max-width: 100%; /* Limita el ancho al 100% del contenedor */
+    white-space: normal; /* Permite el salto de línea natural */
 }
 
 .service-section h2::before {
