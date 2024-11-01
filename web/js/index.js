@@ -207,3 +207,119 @@ window.onbeforeunload = () => {
     }
 };
 
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdown = document.querySelector('.dropdown'); // Menú principal "Servicios"
+    const dropdownContent = dropdown.querySelector('.dropdown-content'); // Submenú de "Servicios"
+    const subDropdowns = document.querySelectorAll('.sub-dropdown'); // Submenús (Ej: Soluciones de Software)
+
+    // Función para cerrar todos los submenús activos
+    function closeAllSubDropdowns() {
+        subDropdowns.forEach(subDropdown => {
+            const subDropdownContent = subDropdown.querySelector('.sub-dropdown-content');
+            if (subDropdownContent) {
+                subDropdownContent.style.display = 'none';
+                subDropdown.classList.remove('active');
+            }
+        });
+    }
+
+    // Evento para abrir/cerrar el submenú principal de "Servicios"
+    dropdown.addEventListener('mouseenter', function () {
+        dropdownContent.style.display = 'block';
+    });
+
+    dropdown.addEventListener('mouseleave', function () {
+        dropdownContent.style.display = 'none';
+        closeAllSubDropdowns(); // Cierra cualquier submenú activo al salir del menú principal
+    });
+
+    // Manejar el clic en las flechas de cada submenú (ej. "Soluciones de Software")
+    subDropdowns.forEach(subDropdown => {
+        const arrow = subDropdown.querySelector('.arrow');
+        
+        if (arrow) {
+            arrow.addEventListener('click', function (e) {
+                e.stopPropagation(); // Prevenir que el clic se propague y cierre el menú completo
+                const subDropdownContent = subDropdown.querySelector('.sub-dropdown-content');
+
+                // Alternar la visibilidad del submenú
+                if (subDropdownContent.style.display === 'block') {
+                    subDropdownContent.style.display = 'none';
+                    subDropdown.classList.remove('active');
+                } else {
+                    closeAllSubDropdowns(); // Cierra otros submenús abiertos
+                    subDropdownContent.style.display = 'block';
+                    subDropdown.classList.add('active');
+                }
+            });
+        }
+    });
+
+    // Cerrar todos los menús si se hace clic fuera
+    document.addEventListener('click', function (e) {
+        if (!dropdown.contains(e.target)) {
+            dropdownContent.style.display = 'none';
+            closeAllSubDropdowns();
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const servicioSection = document.querySelector('.servicios-slider');
+    let firstTimeVisible = true; // Control para la primera aparición de la sección
+
+    // Configuración del Intersection Observer
+    const observerOptions = {
+        root: null,
+        threshold: 0.1 // Detectar cuando el 10% de la sección esté visible
+    };
+
+    let previousScrollY = window.scrollY; // Guardar la posición de scroll anterior para detectar dirección de scroll
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const isScrollingDown = window.scrollY > previousScrollY;
+            previousScrollY = window.scrollY;
+
+            if (firstTimeVisible && entry.isIntersecting) {
+                // Primer efecto cuando se ve la sección por primera vez
+                servicioSection.style.transform = 'scale(1) translateZ(0)';
+                servicioSection.style.opacity = '1';
+
+                // Una vez realizada la primera animación, cambia el control y continúa con la lógica de desplazamiento
+                firstTimeVisible = false;
+            } else {
+                // Lógica de desplazamiento después de la primera aparición
+                if (entry.isIntersecting && entry.boundingClientRect.top < window.innerHeight) {
+                    // Cuando la parte superior de "Servicios" entra a la vista y estamos bajando
+                    if (isScrollingDown) {
+                        servicioSection.style.transform = 'translateZ(0px) scale(1)';
+                        servicioSection.style.opacity = 1;
+                    }
+                } else if (!entry.isIntersecting && entry.boundingClientRect.top < window.innerHeight) {
+                    // Cuando la parte superior de "Servicios" sale de la vista y estamos subiendo
+                    if (!isScrollingDown) {
+                        servicioSection.style.transform = 'translateZ(-400px) scale(0.7)';
+                        servicioSection.style.opacity = 0.3;
+                    }
+                }
+            }
+        });
+    }, observerOptions);
+
+    // Inicia la observación de la sección de servicios
+    observer.observe(servicioSection);
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const items = document.querySelectorAll('.servicio-item');
+
+    items.forEach(item => {
+        item.addEventListener('click', function () {
+            // Elimina la clase 'active' de todos los servicios
+            items.forEach(i => i.classList.remove('active'));
+            // Agrega la clase 'active' solo al elemento clicado
+            this.classList.add('active');
+        });
+    });
+});
