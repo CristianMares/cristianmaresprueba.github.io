@@ -261,3 +261,52 @@ footer p a:hover{
     background-color: #cc6a00;
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
+/* Botón circular */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px; /* Tamaño reducido */
+    height: 50px; /* Tamaño reducido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Fondo negro */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: scale(0);
+    background: conic-gradient(
+        orange 0% 0%, 
+        transparent 0% 100%
+    );
+}
+
+#scrollToTopBtn svg {
+    width: 20px; /* Ajuste del tamaño de la flecha */
+    height: 20px;
+    fill: white;
+}
+
+/* Mostrar el botón con una animación */
+#scrollToTopBtn.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Contorno progresivo basado en scroll */
+#scrollToTopBtn::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background-color: #000; /* Fondo negro dentro del borde */
+    border-radius: 50%;
+    z-index: -1; /* Mantenerlo detrás de la flecha */
+}
