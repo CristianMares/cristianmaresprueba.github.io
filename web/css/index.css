@@ -463,13 +463,13 @@ form button:hover{
         text-align: center; /* Alinea el texto al centro */
     }
 
-    .servicio-item:nth-child(1), 
-    .servicio-item:nth-child(4), 
-    .servicio-item:nth-child(2), 
+    .servicio-item:nth-child(1),
+    .servicio-item:nth-child(4),
+    .servicio-item:nth-child(2),
     .servicio-item:nth-child(3) {
         height: 480px;
     }
-    
+
     .servicio-item {
         width: 100%; /* Asegura que cada servicio ocupe todo el ancho */
         flex-grow: 1;
@@ -479,7 +479,7 @@ form button:hover{
     }
 
     .servicio-item.active {
-        width: 100%; 
+        width: 100%;
     }
 }
 
@@ -503,7 +503,7 @@ form button:hover{
     .ver-mas-btn {
         width: 80%;
         padding: 8px 0;
-         /* Espaciado para separar del párrafo */
+        /* Espaciado para separar del párrafo */
         font-size: 0.9rem; /* Más delgado */
     }
     .details{

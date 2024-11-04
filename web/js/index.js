@@ -1,5 +1,4 @@
 let slideIndex = 0;
-
 // Función para mostrar las diapositivas
 function showSlides(n) {
     let slides = document.getElementsByClassName("carousel-item");
@@ -236,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Manejar el clic en las flechas de cada submenú (ej. "Soluciones de Software")
     subDropdowns.forEach(subDropdown => {
         const arrow = subDropdown.querySelector('.arrow');
-        
+
         if (arrow) {
             arrow.addEventListener('click', function (e) {
                 e.stopPropagation(); // Prevenir que el clic se propague y cierre el menú completo
@@ -323,14 +322,28 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-// Obtener el botón
+const globalScrollThreshold = window.innerHeight * 0.1; // 10% de la altura de la ventana
+
+const header = document.querySelector('header');
+const logo = document.querySelector('.logo');
+const logoText = document.querySelector('.logo-text');
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-// Mostrar el botón cuando se hace scroll y actualizar el borde
-window.onscroll = function () {
+window.addEventListener('scroll', scrollHandler);
+
+function scrollHandler() {
+    const scrollY = window.scrollY;
     const scrollPercentage = getScrollPercentage();
-    
-    if (scrollPercentage > 10) { // Mostrar el botón después de 10% de scroll
+
+    // Cambiar tamaño del header
+    if (scrollY > globalScrollThreshold) {
+        header.classList.add('shrink');
+    } else {
+        header.classList.remove('shrink');
+    }
+
+    // Mostrar el botón "Volver al inicio" y actualizar su borde
+    if (scrollY > globalScrollThreshold) {
         scrollToTopBtn.classList.add("show");
     } else {
         scrollToTopBtn.classList.remove("show");
@@ -338,7 +351,20 @@ window.onscroll = function () {
 
     // Actualizar el borde del botón en función del porcentaje de scroll
     scrollToTopBtn.style.background = `conic-gradient(orange ${scrollPercentage}%, transparent ${scrollPercentage}%)`;
-};
+
+    // Cambiar entre logo y texto en el header
+    if (scrollY > globalScrollThreshold) {
+        logo.style.opacity = '0';
+        logo.style.transform = 'scale(0.95)';
+        logoText.style.opacity = '1';
+        logoText.style.transform = 'translate(-50%, -50%) scale(1)';
+    } else {
+        logo.style.opacity = '1';
+        logo.style.transform = 'scale(1)';
+        logoText.style.opacity = '0';
+        logoText.style.transform = 'translate(-50%, -50%) scale(0.95)';
+    }
+}
 
 // Obtener el porcentaje de desplazamiento
 function getScrollPercentage() {
@@ -349,5 +375,5 @@ function getScrollPercentage() {
 
 // Desplazarse al inicio de la página al hacer clic en el botón
 scrollToTopBtn.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({top: 0, behavior: "smooth"});
 });
