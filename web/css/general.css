@@ -60,9 +60,13 @@ header.shrink + .header-spacer {
 
 .logo-container {
     flex: 1;
-    margin-left: 10px;
+    margin-left: 20px;
     position: relative;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
 }
 
 /* Logo */
@@ -85,6 +89,7 @@ header.shrink + .header-spacer {
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
     white-space: nowrap;
+    padding-bottom: 3%
 }
 
 /* Transiciones para cuando el logo cambia a texto */
