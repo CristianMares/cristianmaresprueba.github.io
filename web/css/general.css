@@ -60,7 +60,7 @@ header.shrink + .header-spacer {
 
 .logo-container {
     flex: 1;
-    margin-left: 20px;
+    margin-left: 20px !important;
     position: relative;
     text-align: center;
     display: flex;
@@ -195,7 +195,7 @@ footer p a:hover{
     font-size:24px;
     cursor:pointer;
     color:#fff;
-    margin-right:20px
+    margin-right:20px !important
 }
 .mobile-menu {
     display: none;
@@ -376,3 +376,4 @@ footer p a:hover{
     border-radius: 50%;
     z-index: -1; /* Mantenerlo detrás de la flecha */
 }
+
