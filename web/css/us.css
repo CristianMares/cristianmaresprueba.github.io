@@ -6,7 +6,7 @@
 }
 
 .contact-image-container img {
-    max-width: 45%;
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
@@ -43,12 +43,50 @@
 /* Hotspots */
 .hotspot {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 5%;
+    height: 8%;
     background-color: rgba(0, 0, 0, 0); /* Invisible */
-    cursor: pointer;
+}
+/* Específicos para cada persona */
+.hotspotAlex {
+    top: 30%;
+    left: 30%;
 }
 
+.tooltipAlex {
+    top: 20%;
+    left: 31%;
+}
+
+.hotspotCristian {
+    top: 34%;
+    left: 40%;
+}
+
+.tooltipCristian {
+    top: 20%;
+    left: 42%;
+}
+
+.hotspotJuan {
+    top: 31%;
+    left: 49%;
+}
+
+.tooltipJuan {
+    top: 20%;
+    left: 50%;
+}
+
+.hotspotMisa {
+    top: 28%;
+    left: 59%;
+}
+
+.tooltipMisa {
+    top: 20%;
+    left: 61%;
+}
 /* Mostrar el tooltip al pasar el mouse sobre el hotspot */
 .hotspot:hover + .tooltip {
     visibility: visible;
