@@ -1,0 +1,128 @@
+/* CSS específico para la página de Industria 4.0 */
+.industria-section {
+    padding: 80px 20px; /* Reduce un poco el padding horizontal */
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.industria-section h2.titulo-principal {
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+    word-break: break-word;
+    padding: 0 10px; /* Añade padding para evitar desbordamientos en móviles */
+}
+
+.industria-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.industria-texto {
+    max-width: 85%; /* Aumenta el ancho del texto */
+    line-height: 1.8;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 0 15px; /* Evita que el texto toque los bordes */
+    text-align: justify;
+}
+
+.industria-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0; /* Añade un poco de espacio alrededor de la imagen */
+}
+
+.industria-imagen img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+h3.titulo-subseccion {
+    font-size: 1.8rem;
+    color: #ff7f00;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.subtitulo-industria {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #3b82f6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.industria-texto ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.industria-texto ul li {
+    position: relative;
+    padding-left: 35px; /* Da más espacio al texto de cada elemento */
+    margin-bottom: 20px;
+}
+
+.industria-texto ul li::before {
+    content: "•";
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    position: absolute;
+    left: 10px; /* Ajusta la posición del punto */
+    top: 0;
+}
+
+.industria-texto p, .industria-texto ul {
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 910px) {
+    .industria-section h2.titulo-principal {
+        font-size: 1.6rem;
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+
+    .industria-container {
+        max-width: 95%; /* Aumenta el ancho */
+        padding: 0 15px;
+    }
+
+    .industria-texto {
+        max-width: 100%;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .industria-imagen img {
+        max-width: 85%;
+        height: auto;
+    }
+
+    .industria-texto ul li {
+        padding-left: 25px;
+        margin-bottom: 15px;
+    }
+
+    .industria-texto ul li::before {
+        font-size: 1.2rem;
+        left: 5px;
+    }
+    
+    .container-indus {
+        padding: 10px 0 20px 0;
+    }
+}
